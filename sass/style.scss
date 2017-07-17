@@ -1,0 +1,51 @@
+@import "variables";
+@import "bootstrap";
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+  .text-muted {
+    margin: $headlines_margins;
+  }
+}
+
+.headlines {
+  border-radius: 4px;
+  background-color: rgba(237, 239, 242, 0.5);
+  padding: 5px 20px;
+  margin-bottom: 10px;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    text-decoration: none;
+    color: $link_hover_color;
+  }
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: $footer_color;
+}
