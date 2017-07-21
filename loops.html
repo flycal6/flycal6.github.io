@@ -14,12 +14,98 @@
     <div class="container">
 
         <div class="page-header">
-            <h1>Topics from JTHW</h1>
+            <h1>Java Basics</h1>
         </div>
 
         <div class="headlines">
-            <h3>Looping</h3>
-            <p class="lead">Hello World
+            <h3>Loops</h3>
+            <p class="lead">
+            What is the difference between a ‘for’, ‘while’ and ‘do while’ loop? Give an
+            example of when you would use one versus another. What is the benefit of a ‘do
+            while’ over a ‘while’?
+            </p>
+
+            <h4>While and Do While</h4>
+            <p>
+                <code>while</code> and <code>do while</code> loops are largely the same.  They both
+                evaluate a boolean expression and if the expression evaluates to <code>true</code>,
+                the loop continues.
+            </p>
+
+            <p>
+                The difference is that a <code>while</code> loop evaluates the expression at the
+                beginning of the loop, where the <code>do while</code> evaluates the expression at
+                the end of the loop.  What this means is that the <code>do while</code> loop is
+                guaranteed to execute at least once, where the <code>while</code> loop might not
+                execute at all.
+            </p>
+
+            <p>
+                Set up a <code>while</code> loop like so:
+                <pre>
+                    while (expression) {
+                        statement(s);
+                    }
+                </pre>
+                and a <code>do while</code> loop like this:
+                <pre>
+                    do {
+                        statement(s);
+                    } while (expression);
+                </pre>
+
+                Be sure your expression at some point evalutates to false, or you will be stuck in
+                an infinite loop.
+            </p>
+
+            <hr  />
+
+            <h4>For Loops</h4>
+            <p>
+                <code>for</code> loops are a better choice when you want to execute a statement a
+                specific number or times, or you want to iterate through an array.
+            </p>
+
+            <p>
+                A basic <code>for</code> loop has three requirements to get going: <code>
+                initialization; termination; increment</code> and looks like this:
+                <pre>
+                for (initialization; termination; increment) {
+                    statement(s)
+                }
+                </pre>
+
+                The <code>initialization</code> expression is executed only once, as the loop begins.
+                The <code>termination</code> expression is evaluated at the start of each loop, and
+                the loop executes as long as it evaluates to true.  The <code>increment</code>
+                expression is invoked at the end of each loop.  This can increase or decrease.
+            </p>
+
+            <p>
+                The following will loop 10 times:
+                <pre>
+                for(int i=1; i<11; i++){
+                    System.out.println("Count is: " + i);
+                }
+                </pre>
+            </p>
+
+            <p>
+                Java also has an <i>Enhanced For Loop</i>, which is specifically for iterating over
+                arrays or similar.  The syntax is slightly more compact and easy to read.
+            </p>
+
+            <p>
+                Enhanced For Loop:
+                <pre>
+                int[] numbers = {1,2,3,4,5,6,7,8,9,10};
+
+                for (int item : numbers) {
+                    System.out.println("number " + item);
+                }
+                </pre>
+                The above example will loop once for each <code>item</code> found in the array <code>
+                numbers[]</code>.
             </p>
         </div>
     </div>
