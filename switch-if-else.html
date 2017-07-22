@@ -27,57 +27,62 @@
             <p>
                 If you have a lot of <code>else if</code> statements chained together, checking the
                 same variable, it will probably be quicker and easier to write a <code>switch case
-                </code> instead.
+                </code>.
             </p>
 
             <p>
-                Compare the following examples:
-                <br  />
+                Compare the following examples which produce the same output: <i>you attend daycare
+                </i>. The switch statement is more obvious that you are only checking a single variable.
+                This can help out when someone else has to go back and read your code.
+            </p>
+            <br  />
                 <h5>If/Else</h5>
 
-                <pre>
-                int age = 5;<br  />
-                if (age == 5) {
-                    System.out.println("you attend school");
-                } else if (age == 4) {
-                    System.out.println("you attend preschool");
-                } else if (age == 3) {
-                    System.out.println("you attend daycare");
-                } else if (age == 2) {
-                    System.out.println("you can crawl");
-                } else if (age == 1) {
-                    System.out.println("you can babble");
-                } else {
-                    System.out.println("I don't know what you can do")
-                }
-                </pre>
+    <!--<pre> indenting here will match what shows up in the browser, so be careful  -->
+    <pre>
+    int age = 3;<br  />
+    if (age == 1) {
+        System.out.println("you can babble");
+    } else if (age == 2) {
+        System.out.println("you can crawl");
+    } else if (age == 3) {
+        System.out.println("you attend daycare");
+    } else if (age == 4) {
+        System.out.println("you attend preschool");
+    } else if (age == 5) {
+        System.out.println("you attend school");
+    } else {
+        System.out.println("I don't know what you can do")
+    }
+    </pre>
 
                 <h5>Switch</h5>
 
-                <pre>
-                int age = 5;
+    <!--<pre> indenting here will match what shows up in the browser, so be careful  -->
+    <pre>
+    int age = 3;
 
-                switch (age) {
-                    case 5:
-                        System.out.println("you attend school");
-                        break;
-                    case 4:
-                        System.out.println("you attend preschool");
-                        break;
-                    case 3:
-                        System.out.println("you attend daycare");
-                        break;
-                    case 2:
-                        System.out.println("you can crawl");
-                        break;
-                    case 1:
-                        System.out.println("you can babble");
-                        break;
-                    default:
-                        System.out.println("I don't know what you can do");
-                        break;
-                }
-                </pre>
+    switch (age) {
+        case 1:
+            System.out.println("you can babble");
+            break;
+        case 2:
+            System.out.println("you can crawl");
+            break;
+        case 3:
+            System.out.println("you attend daycare");
+            break;
+        case 4:
+            System.out.println("you attend preschool");
+            break;
+        case 5:
+            System.out.println("you attend school");
+            break;
+        default:
+            System.out.println("I don't know what you can do");
+            break;
+    }
+    </pre>
             </p>
 
             <p>
@@ -87,15 +92,62 @@
                 cases.
             </p>
 
+
             <p>
-                Both examples achieve the same result, but the switch statement is more plainly
-                obvious that you are only checking a single variable.  This can help out when
-                someone else has to go back and read your code.
+                <i>Fall Through</i> happens if there is no <code>break</code> statement, and all
+                cases after finding a match will be executed in sequence, like so:
+
+    <!--<pre> indenting here will match what shows up in the browser, so be careful  -->
+    <pre>
+    int age = 3;
+
+    switch (age) {
+        case 1:
+            System.out.println("you can babble");
+        case 2:
+            System.out.println("you can crawl");
+        case 3:
+            System.out.println("you attend daycare");
+        case 4:
+            System.out.println("you attend preschool");
+        case 5:
+            System.out.println("you attend school");
+            break;
+        default:
+            System.out.println("I don't know what you can do");
+            break;
+    }
+    </pre>
+                will output: <br /><i>you attend daycare<br  />you attend preschool<br  />you attend
+                     school</i>
             </p>
 
             <p>
-                The <code>switch</code> is also slightly faster to execute, which probably doesn't
-                matter, but maybe it will if you are working on something really large.
+                You can also apply multiple <code>case</code> labels to a single statement, as seen
+                below:
+
+    <pre>
+        int day = 7;
+        String dayString;
+
+        switch (day) {
+            case 1: case 7:
+                dayString = "weekend";
+                break;
+            case 2: case 3: case 4: case 5: case 6:
+                dayString = "weekday";
+                break;
+            default:
+                dayString = "invalid day";
+                break;
+        }
+        System.out.println("That day is a " + dayString);
+    </pre>
+            </p>
+
+            <p>
+                Lastly, a <code>switch</code> is also slightly faster to execute, which probably doesn't
+                matter, but maybe if you are working on something really, really large.
             </p>
         </div>
     </div>
