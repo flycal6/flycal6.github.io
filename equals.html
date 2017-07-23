@@ -14,12 +14,72 @@
     <div class="container">
 
         <div class="page-header">
-            <h1>Topics from JTHW</h1>
+            <h1>Java Basics</h1>
         </div>
 
         <div class="headlines">
             <h3>Equals</h3>
-            <p class="lead">Hello World
+            <p class="lead">When would you use <code>=</code> vs <code>==</code> vs <code>.equals()
+                </code>? What do each of these do and in which cases you should use them?
+            </p>
+
+            <h4>=</h4>
+            <p>
+                <code>=</code> is an assignment operator.  Use it to assign value.  When I use it
+                like <code>int a = 5;</code> or <code>Dog spot = new Dog();</code>, I think to myself, <i>"int a is set to the
+                value 5"</i> or <i>"spot is set to reference a new Dog object"</i>.
+            </p>
+
+            <hr  />
+            <h4>==</h4>
+            <p>
+                <code>==</code> is an equality operator.  It checks to see if the values are equal.
+                For example:
+    <pre>
+        int a = 5;
+        int b = 5;
+        if (a == b) {
+            // this will execute because a and b hold the same value
+        }
+    </pre>
+                <code>==</code> will only check the value of the object reference when used on objects.
+                  It will <i>not</i> check the value of the object being referenced.
+    <pre>
+        String a = new String();
+        String b = new String();
+
+        a = "max";
+        b = "max";
+
+        if (a == b) {
+            // this will <strong>not</strong> execute even though the values are the same, because different
+            objects are being referenced
+        }
+    </pre>
+            </p>
+
+            <hr />
+
+            <h4>.equals()</h4>
+
+            <p>
+                <code>.equals</code> is an equality operator, but unlike <code>==</code>which checks
+                to see if object references are equal, <code>.equals()</code> will check if the
+                value of an object is equal to that of another object.
+                Example:
+    <pre>
+        String a = new String();
+        String b = new String();
+
+        a = "max";
+        b = "max";
+
+        if (a.equals(b)) {
+            // this <strong>will</strong> execute because the value is the same, even though
+            different objects are being referenced
+        }
+    </pre>
+
             </p>
         </div>
     </div>
