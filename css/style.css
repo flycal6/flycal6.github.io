@@ -1086,7 +1086,7 @@ a {
   color: #337ab7;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #337AB7;
+    color: #337ab7;
     text-decoration: underline; }
   a:focus {
     outline: 5px auto -webkit-focus-ring-color;
@@ -3085,7 +3085,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #337AB7;
+    color: #337ab7;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
@@ -4105,7 +4105,7 @@ tbody.collapse.in {
   .pagination > li > span:hover,
   .pagination > li > span:focus {
     z-index: 2;
-    color: #337AB7;
+    color: #337ab7;
     background-color: #eeeeee;
     border-color: #ddd; }
   .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
@@ -5816,15 +5816,20 @@ body {
 
 .headlines {
   border-radius: 4px;
-  background-color: rgba(237, 239, 242, 0.5);
+  background-color: rgba(252, 250, 244, 0.5);
   padding: 5px 20px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  border: 1px solid #dddddd;
+  transition: all .2s ease-in-out; }
 
 a {
   color: inherit; }
+  a .headlines:hover {
+    border-color: #0088cc;
+    box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25); }
   a:hover {
     text-decoration: none;
-    color: #337AB7; }
+    color: #337ab7; }
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -5834,6 +5839,6 @@ a {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #F5F5F5; }
+  background-color: rgba(252, 250, 244, 0.5); }
 
 /*# sourceMappingURL=style.css.map */

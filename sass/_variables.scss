@@ -1,3 +1,14 @@
 $headlines_margins: 20px 0;
-$footer_color: #F5F5F5;
-$link_hover_color: #337AB7;
+
+// ---------------Colors------------------
+$washed_out_blue: rgb(51, 122, 183);
+$very_pale_orange: rgba(252, 250, 244, 0.5);
+$footer_color: $very_pale_orange;
+$light_gray: rgb(221, 221, 221);
+$blueish: rgb(0, 136, 204);
+$hover_shadow_color: rgba(0,105,214,0.25);
+
+$hover_border_color: $blueish;
+$border_color: $light_gray;
+$link_hover_color: $washed_out_blue;
+$headlines_background_color: $very_pale_orange;
