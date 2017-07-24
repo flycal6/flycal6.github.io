@@ -25,20 +25,32 @@
             </p>
 
             <p>
-                A <code>parameter</code> is a variable used within a method definition.  An <code>
-                argument</code> is the actual passed to a method when the method is called.
+                A <code>parameter</code> is a variable used within a method definition.  In the
+                example below, <code>int x</code> is the parameter.
+    <pre>
+        public void foo(int x) {
+            // do stuff
+        }
+    </pre>
             </p>
 
             <p>
-                In this example, <code>a</code> is the argument and <code>x</code> is the parameter:
+                An <code> argument</code> is the value which is passed to a method when the method
+                is called.  Expanding on the previous example, <code>int a</code> is the argument
+                used when invoking <code>foo()</code>.
     <pre>
         int a = 5;
         foo(a);
 
         public void foo(int x) {
             // do stuff
+            // argument 'a' was accepted as parameter 'x'
         }
     </pre>
+            </p>
+
+            <p>
+                When calling a method, use an argument.  When defining a method, use a parameter.
             </p>
         </div>
     </div>

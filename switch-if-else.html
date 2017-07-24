@@ -26,8 +26,8 @@
 
             <p>
                 If you have a lot of <code>else if</code> statements chained together, checking the
-                same variable, it will probably be quicker and easier to write a <code>switch case
-                </code>.
+                same variable, it will probably be quicker and easier to write a <code>switch</code>
+                block.
             </p>
 
             <p>
@@ -40,17 +40,17 @@
 
     <!--<pre> indenting here will match what shows up in the browser, so be careful  -->
     <pre>
-    int age = 3;<br  />
-    if (age == 1) {
-        System.out.println("you can babble");
-    } else if (age == 2) {
-        System.out.println("you can crawl");
-    } else if (age == 3) {
-        System.out.println("you attend daycare");
-    } else if (age == 4) {
-        System.out.println("you attend preschool");
-    } else if (age == 5) {
-        System.out.println("you attend school");
+    int daysOff = 3;<br  />
+    if (daysOff == 1) {
+        System.out.println("you can nap");
+    } else if (daysOff == 2) {
+        System.out.println("you can go out tonight");
+    } else if (daysOff == 3) {
+        System.out.println("you can go camping");
+    } else if (daysOff == 4) {
+        System.out.println("you can take a fishing trip");
+    } else if (daysOff == 5) {
+        System.out.println("you can fly out to see your family");
     } else {
         System.out.println("I don't know what you can do")
     }
@@ -60,23 +60,23 @@
 
     <!--<pre> indenting here will match what shows up in the browser, so be careful  -->
     <pre>
-    int age = 3;
+    int daysOff = 3;
 
-    switch (age) {
+    switch (daysOff) {
         case 1:
-            System.out.println("you can babble");
+            System.out.println("you can nap");
             break;
         case 2:
-            System.out.println("you can crawl");
+            System.out.println("you can go out tonight");
             break;
         case 3:
-            System.out.println("you attend daycare");
+            System.out.println("you can go camping");
             break;
         case 4:
-            System.out.println("you attend preschool");
+            System.out.println("you can take a fishing trip");
             break;
         case 5:
-            System.out.println("you attend school");
+            System.out.println("you can fly out to see your family");
             break;
         default:
             System.out.println("I don't know what you can do");
@@ -99,27 +99,27 @@
 
     <!--<pre> indenting here will match what shows up in the browser, so be careful  -->
     <pre>
-    int age = 3;
+    int daysOff = 3;
 
-    switch (age) {
+    switch (daysOff) {
         case 1:
-            System.out.println("you can babble");
+            System.out.println("you can nap");
         case 2:
-            System.out.println("you can crawl");
+            System.out.println("you can go out tonight");
         case 3:
-            System.out.println("you attend daycare");
+            System.out.println("you can go camping");
         case 4:
-            System.out.println("you attend preschool");
+            System.out.println("you can take a fishing trip");
         case 5:
-            System.out.println("you attend school");
+            System.out.println("you can fly out to see your family");
             break;
         default:
             System.out.println("I don't know what you can do");
             break;
     }
     </pre>
-                will output: <br /><i>you attend daycare<br  />you attend preschool<br  />you attend
-                     school</i>
+                will output: <br /><i>you can go out tonight<br />you can take a fishing trip<br  />
+                you can fly out to see your family</i>
             </p>
 
             <p>

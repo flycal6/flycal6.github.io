@@ -29,7 +29,7 @@
             <p>
                 <code>while</code> and <code>do while</code> loops are largely the same.  They both
                 evaluate a boolean expression and if the expression evaluates to <code>true</code>,
-                the loop continues.
+                the loop executes.
             </p>
 
             <p>
@@ -41,21 +41,23 @@
             </p>
 
             <p>
-                Set up a <code>while</code> loop like so:
-                <pre>
-                    while (expression) {
-                        statement(s);
-                    }
-                </pre>
-                and a <code>do while</code> loop like this:
-                <pre>
-                    do {
-                        statement(s);
-                    } while (expression);
-                </pre>
+                A <code>while</code> loop is set up so that the expression is checked prior to loop
+                execution, like so:
+    <pre>
+        while (expression) {
+            // do stuff;
+        }
+    </pre>
+                Whereas a <code>do while</code> loop is set up to evaluate the expression after the
+                loop, like this:
+    <pre>
+        do {
+            // do stuff;
+        } while (expression);
+    </pre>
 
-                Be sure your expression at some point evalutates to false, or you will be stuck in
-                an infinite loop.
+                In both cases, be sure your expression at some point evalutates to false, or you
+                will be stuck in an infinite loop.
             </p>
 
             <hr  />
@@ -68,17 +70,18 @@
 
             <p>
                 A basic <code>for</code> loop has three requirements to get going: <code>
-                initialization; termination; increment</code> and looks like this:
-                <pre>
-                for (initialization; termination; increment) {
-                    statement(s)
-                }
-                </pre>
+                initialization; termination; increment</code>, and looks like this:
+    <pre>
+        for (initialization; termination; increment) {
+            // do stuff;
+        }
+    </pre>
 
                 The <code>initialization</code> expression is executed only once, as the loop begins.
-                The <code>termination</code> expression is evaluated at the start of each loop, and
-                the loop executes as long as it evaluates to true.  The <code>increment</code>
-                expression is invoked at the end of each loop.  This can increase or decrease.
+                The <code>termination</code> expression is evaluated at the start of each loop to
+                check if the loop should terminate, and the loop executes as long as it evaluates to
+                true.  The <code>increment</code> expression is invoked at the end of each loop, and
+                increments the variable which was initialized.  This can increase or decrease.
             </p>
 
             <p>
